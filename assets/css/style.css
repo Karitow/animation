@@ -1,0 +1,425 @@
+ /* layout de vista mobile */
+ body{
+    margin:0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+   }
+  
+   .grid-container {
+      margin:0px;
+      padding:0px;
+      display: grid;
+      min-height: 100vh;     
+      border: none;
+      grid-template-rows: 1fr 1fr 5fr 1fr;
+      grid-template-areas: 
+      "menu_nav"
+      "header"
+      "principal"
+      "pie_pagina";
+   }
+  
+   .titulo{
+    border: none;
+    display:flex;
+    flex-direction:row;
+    padding: 0px;
+    width: 100%;
+    height:30px;
+    justify-content: center;
+    text-align:center;
+    align-items:center;
+   }
+
+   
+
+   .logo{
+    border-radius:75px;
+    height:60px;
+    width:60px;
+    text-align:start;
+    align-items:start;
+    margin-top:15px;
+    border-left:1px;
+    margin-right:5px;
+    justify-content:start;
+    transform: rotate(10deg);
+    transition: transform 1s ease;
+  }
+
+  .titulo{
+    color:palevioletred;
+    text-align:center;
+  }
+
+  .logo:hover{
+    transform: rotate(45deg);
+    
+  }
+  
+  h1{
+    transition: all 1s linear;
+  }
+
+  h1:hover{
+    font-size:20px;
+    color:rgb(230, 81, 130);
+  }
+
+   p{
+    text-align:left;
+    margin-left:40px;
+   }
+  
+   header{
+     background-color: rgba(220, 220, 220, 0.664);
+     padding:7px;
+     font-size:18px;
+     grid-area: header;
+     color:palevioletred;
+     margin:0px;
+     text-align:center;
+  
+   }
+   
+   .color {
+     width: 350px;
+     height:40px;
+     justify-content: center;
+   }
+   
+   nav {
+      padding: 10px;
+      color: white;
+      background-color: palevioletred;
+      grid-area: menu_nav;
+      font-size:20px;
+   }
+  
+   .navbar{
+     display:flex;
+     text-align:right;
+     margin-top:25px;
+     justify-content: right;
+   }
+  
+   .fa-solid.fa-heart{
+     display:none;
+   }
+  
+   .fa-solid.fa-bars{
+      color:white;
+      justify-content:right;
+      display:flex;
+   }
+   
+   main {
+      padding: 5px;
+      grid-area: principal;
+   }
+   
+   article{
+      background-color: white;
+      text-align: center;
+      color:rgb(235, 123, 211);
+   }
+   
+   .card{
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+  }
+
+  .card:hover{
+    filter: grayscale(0%);
+  }
+
+   .card {
+    height:250px;
+    width:250px;
+    text-align:center;
+    margin: 20px;
+    border:10px;
+  }
+
+  .image {
+    height:120px;
+    width:120px;
+    text-align:center;
+    margin: 0px;
+    border:20px;
+}
+
+  .catalogo{
+    text-align: center;
+  }
+  
+  .cata {
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    margin-left:40px;
+  }
+  
+  .image,
+  .text {
+    text-align:center;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/sprinkles\ vector.png);
+    color: rgb(189, 85, 103);
+    font-size: 30px;
+    opacity: 0;
+  }
+  
+  .cata:hover .image {
+    opacity: 0;
+  }
+  
+  .cata:hover .text {
+    opacity: 1;
+  }
+  
+   section{
+     width: 80px;
+     text-align:center;
+     justify-content: center;
+     display:center;
+   }
+  
+   select{
+    text-align:center;
+   }
+  
+   li{
+     gap:10px;
+     text-decoration: none;
+     margin-top: 10px;
+     list-style-type: none;
+   }
+  
+   .numero{
+     text-align:center;
+   }
+  
+   button {
+      padding:12px;
+      border:palevioletred;
+      color:white;
+      background-color:palevioletred;
+      justify-content:center;
+      text-align:center;
+      border: 5px;
+   }
+   
+  article{
+      background-color: white;
+      text-align: center;
+      color:rgb(235, 123, 211);
+   }
+  
+   .producto{
+     display:none;
+   }
+   
+   .card {
+      height:250px;
+      width:250px;
+      text-align:center;
+      margin: 20px;
+      border:10px;
+   }
+  
+   section{
+     width: 80px;
+     text-align:center;
+     justify-content: center;
+     display:center;
+  
+   }
+   footer {
+      background:palevioletred;
+      color:white;
+      padding:5px;
+      text-align:center;
+      grid-area: pie_pagina;
+      font-size:18px;
+      text-align: center;
+   }
+   
+   .fa-brands.fa-instagram{
+    font-size:30px;
+    color:whitesmoke;
+  }
+
+  .fa-brands.fa-facebook{
+    font-size:30px;
+    color:whitesmoke;
+    margin-left:10px
+  }
+
+  h2{
+    color:whitesmoke
+  }
+   
+   
+  
+   
+   
+   /* ahora con MQ cambiar el orden del div para 992 y 1200 px */
+   
+   @media (min-width: 576px) {
+      .grid-container{
+         grid-template-columns: 2fr 9fr;
+         grid-template-areas: 
+         "menu_nav header"
+         "menu_nav principal"
+         "menu_nav principal"
+         "pie_pagina pie_pagina";
+      }
+
+      .navbar{
+        color:rgb(122, 48, 89);
+        margin-top:40px;
+        display:flex;
+        text-decoration:none;
+        gap:20px;
+        font-size:25px;
+      }
+
+
+  
+      
+      nav{
+        background-image: url(../img/sprinkles\ vector.png);
+        color:rgb(122, 48, 89);
+        font-size:30px;
+        grid-area: menu_nav;
+        min-height: 100vh; 
+      }
+
+      .logo{
+        border-radius:75px;
+        height:90px;
+        width:90px;
+        justify-content:center;
+        text-align:center;
+        margin-top:60px;
+      }
+
+      .navbar{
+        display:flexbox;
+        border-top:20px;
+        margin-top:60px;
+        justify-content: left;
+        gap:30px;
+      }
+
+      h6{
+        display:inline-block;
+        margin-top: 5px;
+
+      }
+
+      article{
+        background-color:white;
+        color: rgb(182, 72, 90);
+        display:flexbox;
+        font-size:20px;
+        justify-content:center;
+
+      }
+      
+      .card {
+         height:300px;
+         width:300px;
+         text-align:justify;
+         margin: 10px;
+         border:0px;
+      }
+
+      #catalogo{
+        display:flex;
+        flex-direction:row;
+        padding:0px;
+        border:80px; 
+        justify-content:center;
+        text-align:center;
+        background-color:white;
+      }
+
+      .cata{
+        width:450px;
+        height:300px;
+      }
+
+      .image{
+        justify-content:center;
+      }
+
+  
+      p{
+        text-align:left;
+        margin-left: 52px;
+      }
+  
+      header{
+        background-color: rgba(220, 220, 220, 0.664);
+        padding:7px;
+        font-size:18px;
+        grid-area: header;
+        color:palevioletred
+        width:1280px;
+        text-align:center;
+      }
+  
+      .color{
+        width:990px;
+      }
+      
+  
+      article{
+      font-size:20px;
+      padding:20px;
+      margin: 1px;
+      border:2px;
+      justify-content: center;
+      color:palevioletred;
+     }
+  
+  
+      footer{
+        background-color: rgb(194, 107, 121);
+        color:rgb(59, 56, 56);
+        width:1620px;
+        height:130px;
+        grid-area: pie_pagina;
+      }
+
+      .fa-brands.fa-instagram{
+        font-size:50px;
+        color:whitesmoke;
+      }
+  
+      .fa-brands.fa-facebook{
+        font-size:50px;
+        color:whitesmoke;
+        margin-left:10px
+      }
+
+      h2{
+        color:rgb(250, 157, 173);
+      }
+      
+   }
+   
+  
